@@ -44,8 +44,8 @@ console.log(this.foo) // => "baz"
 
 We see that *this* in *inner_scope* changed depending on how the function was called.
 
-When we invoked the function in the regular way, *this* referred to the Window object.
-When invoked it with the *call* method, the parameter we passed to the function became our *this*.
+When we called the function in the regular way, *this* referred to the Window object.
+When called the function with the *call* method, the parameter we passed to *call* method became our *this*.
 
 
 Let's consider one more example:
