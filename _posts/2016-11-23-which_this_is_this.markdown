@@ -1,19 +1,20 @@
 ---
 layout: post
 title:  "Which This Is This"
-date:   2016-11-23 03:43:58 +0000
+date:   2016-11-22 22:43:58 -0500
 ---
 
 
-A concept that isn't completely clear when starting out with javascript is the *this* keyword.
-In order to fully appreciate this (no pun intended) a firm understanding of **scope** in javascript is needed.
+A concept not always completely clear in javascript is the *this* keyword.
+Note: to fully appreciate this (no pun intended) an understanding of javascript **scope** is needed.
 
 The following sentence is very important and I will explain it:
->     What the *this* keyword in a given scope will point to, is determined by the way the scope is invoked.
+>     What the *this* keyword in a given scope will reference, is determined by the way the scope is invoked.
 
 What does that mean...?
 It's example time:
 
+Let's start with the global scope - 
 ```
 //global scope
 
@@ -24,10 +25,10 @@ console.log(this) // => Window {speechSynthesis: SpeechSynthesis, caches: Cac…
 console.log(this.foo) // => "baz"
 ```
 
-What's *this*? the above example shows us that in the global scope *this* points to the Window object.
-Note that global variables are actually properties of the Window object. In the above example console.log(foo) would have been the same thing.
+What's *this*? the above example shows us that in the global scope *this* refers to the Window object.
+Note that global variables are actually properties of the Window object. In the above example console.log(foo) would have also printed "baz" into the console.
 
-Yay! another code snippet!
+Now let's define a function named inner_scope, what does *this* refer to within the function?
 
 ```
 //global scope
@@ -36,22 +37,23 @@ var foo = 'baz';
 
 
 function inner_scope() {
-  var foo = 'will not be accessed' ;
+  var foo = 'will not be accessed';
 	
-	console.log(this.foo);
+  console.log(this.foo);
 }
 
-inner_scope.call( {foo: 'this is the this.foo that will be accessed'} ); // => "this is the this.foo that will be accessed"
 inner_scope() // => "baz"
+inner_scope.call( {foo: 'this is the this.foo that will be accessed'} ); // => "this is the this.foo that will be accessed"
 
 console.log(this) // => Window {speechSynthesis: SpeechSynthesis, caches: Cac…}
 console.log(this.foo) // => "baz"
 ```
 
-We see that *this* in *inner_scope* was defined by the way the function was called.
+We see that *this* in *inner_scope* changed depending on how the function was called.
 
+When we invoked the function in the regular way, *this* referred to the Window object.
 When invoked with the *call* method, the parameter we passed to the function became our *this*.
-When we invoked the function in the normal way, however, *this* still referred to the Window object.
+
 
 Let's consider one more example:
 
@@ -66,7 +68,7 @@ function inner_scope() {
 	
 	console.log(this.foo);
 
-    (function(){console.log(this.foo)}()); // What will this write to the console..?
+  (function(){console.log(this.foo)}()); // What will this write to the console..?
 }
 
 inner_scope.call( {foo: 'this is the this.foo that will be accessed'} ); 
@@ -79,7 +81,7 @@ But what do you think the second `console.log(this.foo)  ` will return?
 
 If you answered "baz" then you are correct. *this* was pointing to the Window object.
 The lesson here is that *this*, unlike other variables, **cannot be accessed from an inner scope**
-An inner scope will revert back to the window object no matter what *this* in the containing scope is pointing to.
+An inner scope will revert back to the window object no matter what *this* in the containing scope refers to.
 
 ### So how do I control *this*?
 I'm glad you asked.
