@@ -6,13 +6,7 @@ date:   2016-11-22 22:43:58 -0500
 
 
 A concept not always completely clear in javascript is the *this* keyword.
-Note: to fully appreciate this (no pun intended) an understanding of javascript **scope** is needed.
-
-The following sentence is very important and I will explain it:
->     What the *this* keyword in a given scope will reference, is determined by the way the scope is invoked.
-
-What does that mean...?
-It's example time:
+Note: to fully appreciate this (no pun intended) you'll need to understand javascript **scope**.
 
 Let's start with the global scope - 
 ```
@@ -35,7 +29,6 @@ Now let's define a function named inner_scope, what does *this* refer to within 
 
 var foo = 'baz';
 
-
 function inner_scope() {
   var foo = 'will not be accessed';
 	
@@ -52,7 +45,7 @@ console.log(this.foo) // => "baz"
 We see that *this* in *inner_scope* changed depending on how the function was called.
 
 When we invoked the function in the regular way, *this* referred to the Window object.
-When invoked with the *call* method, the parameter we passed to the function became our *this*.
+When invoked it with the *call* method, the parameter we passed to the function became our *this*.
 
 
 Let's consider one more example:
@@ -62,11 +55,10 @@ Let's consider one more example:
 
 var foo = 'baz';
 
-
 function inner_scope() {
   var foo = 'will not be accessed' ;
 	
-	console.log(this.foo);
+  console.log(this.foo);
 
   (function(){console.log(this.foo)}()); // What will this write to the console..?
 }
