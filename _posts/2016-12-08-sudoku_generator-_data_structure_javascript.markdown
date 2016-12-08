@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Sudoku Generator- data structure (javascript)"
-date:   2016-12-08 23:02:30 +0000
+date:   2016-12-08 18:02:31 -0500
 ---
 
 ## The Challange
@@ -40,9 +40,9 @@ The following function returns a Sudoku board object.
       };
     }());
 
-    this.xLines = initX(board);
-    this.yLines = initY(board);
-    this.boxes = initBoxes(board);
+    this.xLines = initX(board); //returns array of horizontal lines
+    this.yLines = initY(board); //returns array of vertical lines
+    this.boxes = initBoxes(board); //returns array of 3x3 sudoku boxes
     this.board = board;
 
   } // end Sudoku
