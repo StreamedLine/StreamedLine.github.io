@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Beginner Ruby Notes"
-date:   2017-01-15 20:39:18 +0000
+date:   2017-01-15 15:39:19 -0500
 ---
 
 
