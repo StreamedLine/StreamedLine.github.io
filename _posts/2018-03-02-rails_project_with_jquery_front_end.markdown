@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "Rails Project With JQuery Front End"
-date:       2018-03-02 20:41:03 +0000
+date:       2018-03-02 15:41:03 -0500
 permalink:  rails_project_with_jquery_front_end
 ---
 
@@ -98,7 +98,7 @@ Of course such a call could be used anywhere.
 One common pattern is to hijack a buttons click event:
 
 ```
-$('form#new_bullet').on('submit', function(e){
+$('form#new_category').on('submit', function(e){
 		e.preventDefault();
 		//ajax post request
 });
