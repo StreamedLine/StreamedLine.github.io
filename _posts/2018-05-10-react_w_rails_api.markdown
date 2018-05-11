@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "React w/ Rails API"
-date:       2018-05-11 01:57:48 +0000
+date:       2018-05-10 21:57:49 -0400
 permalink:  react_w_rails_api
 ---
 
@@ -131,7 +131,7 @@ export default App;
 
 ```
 
-Now, when I click on the 'two' link, not only does it not work, but the One component disappears as well!
+Now, when I click on the 'two' link, not only does it not render and display TwoDeep, but the OneDeep component disappears as well!
 This is because by clicking on the 'two' link, I changed the route from '/one' to '/one/two', and component OneDeep only displays when the EXACT route of '/one' appears.
 So OneDeep is not rendered and disappears from the screen.
 Unfortunately TwoDeep is nested within OneDeep so its route is rendered irrelevant (pun not intended).
