@@ -1,11 +1,12 @@
 ---
 layout: post
-title:  "CLI Data Gem Project"
-date:   2017-02-09 23:46:11 +0000
+title:      "CLI Data Gem Project"
+date:       2017-02-09 18:46:12 -0500
+permalink:  cli_data_gem_project
 ---
 
 
-I'm almost done my project, and I've learned a lot. If I hadn't learned so much I'd be creating it from scratch, since I know alot more than when I started, I'm not as satisfied with it.
+I'm almost done my project, and I've learned a lot. 
 
 One thing that is now firmly part of my brain, is the file structure of a basic ruby project.
 lib, bin and gemfile (not to mention gemfile.lock..) used to be a blur in my brain.
@@ -32,12 +33,8 @@ And then it clicked- **bundler install**!! that's the solution!
 No more will my brain glaze over at the mention of bundler.
 
 So that's why a gemfile is so useful.
-I immediately reviewed how to populate my gemfile.
-
 My life is better now.
 
 I do wish I would have started my project by creating a gem and not tried to convert it to a gem later.
-Knowing how to easily build and publish gems means I can make real and useful things!!
 
-Just two months ago I was looking up basic Ruby syntax but now I feel like I have the power to create real programs.
 
