@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "Write that Code"
-date:   2016-10-19 15:12:36 +0000
+title:      "Writing Code is Learning"
+date:       2016-10-19 11:12:36 -0400
+permalink:  write_that_code
 ---
 
 
 In the past few years, I've been spending most of my available time writing or learning how write code.
-Most of my learning came from actually writing the code. Reading books and following tutorials showed me best-practices and techniques, but the actual writing of code is what really taught me what I know. It has helped me develop a sense of when the code I'm writing is clean and when it is dirty.
+Most of my learning came from actually writing the code. Reading books and following tutorials showed me best-practices and techniques, but the actual writing of code is what really taught me what I know. It has helped me develop a sense of when the code I'm writing is clean and when it is messy.
 
 It's only when I actually worked on my own projects (where I would sometimes have to write and rewrite again) that I noticed how code can get entangled and trip over itself.
 
